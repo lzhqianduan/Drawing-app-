@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #allStyleBox {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            text-align: center;
+            background-color: pink;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        div dl {
+            float: left;
+            flex: 1;
+            margin-top: 10px;
+        }
+
+        canvas {
+            border: 1px solid #ccc;
+            background-color: rgb(247, 238, 238);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="allStyleBox" class="tools">
+        <dl>
+            <dt>选形状</dt>
+            <dd>
+                <select id="pickShape" tag="shape">
+                    <option value="line">直线</option>
+                    <option value="rect">矩形</option>
+                    <option value="circle">画图</option>
+                    <option value="clear">橡皮擦</option>
+                    <option value="cleararea">清除区域</option>
+                </select>
+            </dd>
+        </dl>
+        <dl>
+            <dt>选颜色</dt>
+            <dd>
+                <select id="pickColor" tag="color">
+                    <option value="red">红色</option>
+                    <option value="black">黑色</option>
+                    <option value="yellow">黄色</option>
+                </select>
+            </dd>
+        </dl>
+        <dl>
+            <dt>填充/描边</dt>
+            <dd>
+                <select id="pickStroke" tag="strokeFill">
+                    <option value="fill">填充</option>
+                    <option value="stroke">描边</option>
+                </select>
+            </dd>
+        </dl>
+        <dl>
+            <dt>线宽</dt>
+            <dd>
+                <select id="pinkLine" tag="line">
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select>
+            </dd>
+        </dl>
+        <dl>
+            <dt>橡皮擦</dt>
+            <dd>
+                <select id="pinkClear" tag="clearWidth">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </dd>
+        </dl>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="./index.js"></script>
+</body>
+
+</html>
